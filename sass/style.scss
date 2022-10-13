@@ -559,21 +559,46 @@ line-height: 2px;
 
 
 //---------------------------------------------------------------------------------------------
-@media (max-width: 775px) {
-  .sans-cesure {
-  display: none;}
+
+
+@media (min-width: 337px){
+  .liste {
+    align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5px;
+  background-color: white; /*3*/
+  box-shadow: 0px 5px 20px #999; /*4*/
+  border-radius: 15px;
+  width: 95%;
+  margin-bottom: 10px;
+  
+  
+  &:hover .raccourcir {
+    display: inline;}
+  
+  
+    & .points {
+      display: none;}
+  
+      &:hover .points  {
+        display: none;
+      color: #000000;}
+  
   }
 
-
-
+  .conteneur-header {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+}
 //--------------------------------------------------------------------------------------------
 @media (min-width: 776px) {
-  .sans-cesure {
-    display: block;}
-
-  .cesure {display: none;}
-
-    .button {
+      .button {
       &.degradé {
         width: 30%;
       }
@@ -630,30 +655,7 @@ section h1 {
 }
 }
 
-.liste {
-  align-content: center;
-align-items: center;
-justify-content: center;
-padding-left: 5px;
-background-color: white; /*3*/
-box-shadow: 0px 5px 20px #999; /*4*/
-border-radius: 15px;
-width: 95%;
-margin-bottom: 10px;
 
-
-&:hover .raccourcir {
-  display: inline;}
-
-
-  & .points {
-    display: none;}
-
-    &:hover .points  {
-      display: none;
-    color: #000000;}
-
-}
 .card {
 
   width:500px; 
