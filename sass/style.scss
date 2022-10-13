@@ -561,7 +561,7 @@ line-height: 2px;
 //---------------------------------------------------------------------------------------------
 
 
-@media (min-width: 337px){
+@media (min-width: 450px) and (max-width:1900px) {
   .liste {
     align-content: center;
   align-items: center;
@@ -595,9 +595,8 @@ line-height: 2px;
     justify-content: center;
     align-items: center;
 }
-}
-//--------------------------------------------------------------------------------------------
-@media (min-width: 776px) {
+
+
       .button {
       &.degradé {
         width: 30%;
@@ -646,7 +645,7 @@ section h1 {
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
-  width: 50%;
+  width: 70%;
 
   .button {
     &.degradé {
