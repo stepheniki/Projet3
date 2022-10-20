@@ -106,14 +106,15 @@ body .container {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  transition: padding-right 450ms ease-in-out;
+  transition: padding-right 220ms ease-in-out;
 }
 .checkbox:hover {
   padding-right: 50px;
 }
 .checkbox:hover .cross {
   opacity: 1;
-  transform: translate(0px);
+  transform: translate(-70px);
+  margin-right: -70px;
 }
 .checkbox:hover .fa-check-circle {
   transform: rotate(360deg);
@@ -133,7 +134,10 @@ body .container {
   top: 0px;
   right: 0px;
   opacity: 0;
-  transition: transform 330ms ease-in-out;
+  transition-property: transform;
+  transition-duration: 700ms;
+  transition-timing-function: all;
+  transition-delay: 0s;
 }
 .cross .fa-check-circle {
   color: rgb(255, 255, 255);
@@ -142,10 +146,10 @@ body .container {
 
 .loading {
   display: block;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 999;
+  z-index: 10000;
   /*ici tout ce qui concerne votre background linear gradient*/
   background-color: rgb(255, 255, 255);
   animation: hideLoader 3500ms 1 forwards;
@@ -177,7 +181,7 @@ body .container {
 @keyframes hideLoader {
   100% {
     opacity: 0;
-    display: none;
+    z-index: -10;
   }
 }
 @keyframes spin {
@@ -385,27 +389,30 @@ body .container {
   color: #a3a3a3;
   position: relative;
   float: right;
-  padding-right: 28px;
-  padding-top: 25px;
+  right: 18px;
+  top: 25px;
   font-size: 25px;
 }
 .fa.fa-hover-show {
   float: right;
-  padding-right: 28px;
-  padding-top: 25px;
+  top: 25px;
   background-clip: text;
   background: linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 25px;
+  left: 7px;
 }
 
 .fa.fa-hover-show, :hover > .fa.fa-hover-hidden {
-  display: none;
+  opacity: 0;
 }
 
 :hover > .fa.fa-hover-show {
-  display: block;
+  opacity: 1;
+  transition: 3s;
+  float: right;
+  position: relative;
 }
 
 .card {
