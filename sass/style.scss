@@ -166,7 +166,7 @@ body {
 position: fixed;
 width: 100%;
 height: 100%;
-z-index: 10000;
+z-index: 9999;
 /*ici tout ce qui concerne votre background linear gradient*/
 background-color: rgb(255, 255, 255);
 animation: hideLoader 3500ms 1 forwards;
